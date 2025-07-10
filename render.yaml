@@ -9,12 +9,6 @@ services:
         value: 3.11.0
       - key: PYTHONPATH
         value: /opt/render/project/src
-      - key: MONGODB_URL
-        value: mongodb+srv://abdulhadiakanni:RkMyRt1OcbCpg2sH@cancer.hgkqiep.mongodb.net/?retryWrites=true&w=majority&appName=Cancer # Default from codebase
-      - key: SECRET_KEY
-        value: supersecretkey # Default from codebase
-      - key: ADMIN_REG_CODE
-        value: admin-setup-2024 # Default from codebase
     healthCheckPath: /health
     autoDeploy: true
     plan: starter

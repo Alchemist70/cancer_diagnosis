@@ -31,6 +31,8 @@ frontend/build/
 frontend/.env
 frontend/.env.*
 
+node_modules/
+
 # OS-specific
 .DS_Store
 Thumbs.db
