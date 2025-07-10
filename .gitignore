@@ -17,10 +17,10 @@ myenv/
 # Jupyter Notebooks
 .ipynb_checkpoints
 
-# Data and model files
-models/
-*.pkl
-Cancer_Data.csv
+# # Data and model files
+# models/
+# *.pkl
+# Cancer_Data.csv
 
 # FastAPI/Starlette
 instance/

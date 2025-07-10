@@ -20,6 +20,6 @@ services:
     staticPublishPath: ./frontend/build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://cancer-diagnosis-api.onrender.com
+        value: https://cancer-diagnosis-backend.onrender.com
     autoDeploy: true
     plan: starter

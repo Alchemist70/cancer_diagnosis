@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const GUIDELINES_PATH = "/guidelines.json";
-const LOGIN_PATH = "/login";
+const API_URL = process.env.REACT_APP_API_URL || "";
+const GUIDELINES_PATH = `${API_URL}/guidelines`;
+const LOGIN_PATH = `${API_URL}/login`;
 const ADMIN_ROLE = "admin";
-const USERS_PATH = "/users";
-const DELETE_USER_PATH = "/delete-user";
+const USERS_PATH = `${API_URL}/users`;
+const DELETE_USER_PATH = `${API_URL}/delete-user`;
+const SAVE_GUIDELINES_PATH = `${API_URL}/save-guidelines`;
 
 const defaultGuideline = {
   primary_treatment: "",
@@ -98,7 +100,7 @@ const Admin: React.FC = () => {
   const saveGuidelines = async () => {
     setStatus("Saving...");
     try {
-      const res = await fetch("/save-guidelines", {
+      const res = await fetch(SAVE_GUIDELINES_PATH, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

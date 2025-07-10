@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const LOGIN_PATH = "/login";
+const API_URL = process.env.REACT_APP_API_URL || "";
+const LOGIN_PATH = `${API_URL}/login`;
 
 const Login: React.FC = () => {
   const [form, setForm] = useState({ username: "", password: "" });

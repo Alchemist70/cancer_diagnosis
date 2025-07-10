@@ -76,9 +76,14 @@ const DiagnosisForm: React.FC = () => {
           formData.append(key, value as any);
         }
       });
-      const response = await axios.post("/predict/comprehensive", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const API_URL = process.env.REACT_APP_API_URL || "";
+      const response = await axios.post(
+        `${API_URL}/predict/comprehensive`,
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       localStorage.setItem("diagnosisResults", JSON.stringify(response.data));
       localStorage.removeItem("batchResults");
       navigate("/results");

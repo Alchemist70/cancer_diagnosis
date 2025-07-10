@@ -27,7 +27,8 @@ const Register: React.FC = () => {
       params.append("password", form.password);
       params.append("role", form.role);
       if (form.role === "admin") params.append("admin_code", form.admin_code);
-      const res = await fetch("/register", {
+      const API_URL = process.env.REACT_APP_API_URL || "";
+      const res = await fetch(`${API_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
