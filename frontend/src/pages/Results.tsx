@@ -179,10 +179,10 @@ const Results: React.FC = () => {
     doc.circle(27.5, 25, 8, "F");
     doc.setFontSize(18);
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Cancer Diagnosis Report", 50, 20);
     doc.setFontSize(12);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.setTextColor(80, 80, 80);
     doc.text(`Date: ${new Date(results.timestamp).toLocaleString()}`, 150, 20);
     doc.setDrawColor(200, 200, 200);
@@ -193,11 +193,11 @@ const Results: React.FC = () => {
     doc.setFillColor(60, 120, 216);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Diagnosis", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Result: ${results.diagnosis.prediction}`, 14, y);
     y += 7;
     doc.text(
@@ -228,11 +228,11 @@ const Results: React.FC = () => {
     doc.setFillColor(0, 180, 120);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Cancer Type", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Type: ${results.cancer_type.prediction}`, 14, y);
     y += 7;
     doc.text(
@@ -281,10 +281,10 @@ const Results: React.FC = () => {
     doc.setFillColor(255, 180, 0);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Metastasis", 14, y + 6);
     y += 12;
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Status: ${results.metastasis.prediction}`, 14, y);
     y += 7;
     doc.text(
@@ -324,11 +324,11 @@ const Results: React.FC = () => {
     doc.setFillColor(120, 60, 216);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Tissue Change", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Type: ${results.tissue_change.prediction}`, 14, y);
     y += 7;
     doc.text(`Severity: ${results.tissue_change.severity}`, 14, y);
@@ -365,11 +365,11 @@ const Results: React.FC = () => {
     doc.setFillColor(60, 120, 216);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Prognosis", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Outcome: ${results.prognosis.prediction}`, 14, y);
     y += 7;
     doc.text(
@@ -408,11 +408,11 @@ const Results: React.FC = () => {
     doc.setFillColor(0, 180, 120);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Therapy", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Primary: ${results.therapy.primary_treatment}`, 14, y);
     y += 7;
     doc.text(
@@ -466,10 +466,10 @@ const Results: React.FC = () => {
     doc.setFillColor(255, 180, 0);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Genetic Analysis", 14, y + 6);
     y += 12;
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Mutations: ${results.genetic.mutations.join(", ")}`, 14, y);
     y += 7;
     doc.text(`Risk Genes: ${results.genetic.risk_genes.join(", ")}`, 14, y);
@@ -498,11 +498,11 @@ const Results: React.FC = () => {
     doc.setFillColor(120, 60, 216);
     doc.rect(10, y, 190, 8, "F");
     doc.setTextColor(255, 255, 255);
-    doc.setFont(undefined, "bold");
+    doc.setFont("helvetica", "bold");
     doc.text("Overall Risk & Next Steps", 14, y + 6);
     y += 12;
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, "normal");
+    doc.setFont("helvetica", "normal");
     doc.text(`Overall Risk: ${results.overall_risk}`, 14, y);
     y += 2;
     autoTable(doc, {
